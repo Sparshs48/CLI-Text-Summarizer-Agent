@@ -1,7 +1,7 @@
 {
   "tasks": {
-    "summarize": "deno run --allow-env --allow-read --allow-net summarizer.ts",
-    "summarize:url": "deno run --allow-env --allow-read --allow-net summarizer.ts --url"
+    "summarize": "deno run --allow-env --allow-read --allow-net --allow-sys summarizer.ts",
+    "summarize:url": "deno run --allow-env --allow-read --allow-net --allow-sys summarizer.ts --url"
   },
   "imports": {
     "@corespeed/zypher": "jsr:@corespeed/zypher@^0.5.2",

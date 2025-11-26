@@ -190,7 +190,7 @@ Text to summarize:
 ${text}`;
 
   try {
-    const task = agent.runTask(prompt);
+    const task = agent.runTask(prompt, "gemini-2.0-flash");
 
     // Check what type task is
     if (!task) {
@@ -318,10 +318,23 @@ Environment Variables:
       inputText = inputText.substring(0, maxLength) + "...";
     }
 
-    // Get Gemini API key
-    const geminiKey = Deno.env.get("GEMINI_API_KEY");
+    // Get Gemini API key - try environment variable first, then config file
+    let geminiKey = Deno.env.get("GEMINI_API_KEY");
+
+    // If not in env, try reading from config file
     if (!geminiKey) {
-      throw new Error("Please set GEMINI_API_KEY environment variable");
+      try {
+        const configText = await Deno.readTextFile("./.gemini_api_key");
+        geminiKey = configText.trim();
+      } catch {
+        // Config file doesn't exist, that's okay
+      }
+    }
+
+    if (!geminiKey) {
+      throw new Error(
+        "Please set GEMINI_API_KEY environment variable or create a .gemini_api_key file with your API key",
+      );
     }
 
     // Initialize the agent execution context
