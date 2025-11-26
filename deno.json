@@ -1,0 +1,15 @@
+{
+  "tasks": {
+    "summarize": "deno run --allow-env --allow-read --allow-net summarizer.ts",
+    "summarize:url": "deno run --allow-env --allow-read --allow-net summarizer.ts --url"
+  },
+  "imports": {
+    "@corespeed/zypher": "jsr:@corespeed/zypher@^0.5.2",
+    "rxjs-for-await": "npm:rxjs-for-await@^1.0.0",
+    "rxjs": "npm:rxjs@^7.8.2"
+  },
+  "compilerOptions": {
+    "lib": ["deno.window"],
+    "strict": true
+  }
+}
