@@ -19,7 +19,7 @@
 ```powershell
 # Set environment variables
 $env:HOME = $env:USERPROFILE
-$env:GEMINI_API_KEY="AIzaSyBbD_4BQ9C_YJQpMwjNsY0woh913B5GbvA"
+$env:GEMINI_API_KEY="Your Key"
 
 # Run the summarizer
 deno run --allow-env --allow-read --allow-net --allow-sys summarizer.ts "Your text here"
@@ -57,7 +57,7 @@ You should see something like: `deno 2.0.0` or higher.
 1. Go to [Google AI Studio](https://makersuite.google.com/app/apikey)
 2. Sign in with your Google account
 3. Click "Create API Key"
-4. Copy your API key (it looks like: `AIzaSyBbD_4BQ9C_YJQpMwjNsY0woh913B5GbvA`)
+4. Copy your API key (it will look like: `AIzaSy...` - keep this secure!)
 
 ---
 
@@ -269,7 +269,7 @@ deno run --allow-env --allow-read --allow-net --allow-sys summarizer.ts "Your te
 2. **Set Environment Variables**
    ```powershell
    $env:HOME = $env:USERPROFILE
-   $env:GEMINI_API_KEY="AIzaSyBbD_4BQ9C_YJQpMwjNsY0woh913B5GbvA"
+   $env:GEMINI_API_KEY="your key"
    ```
 
 3. **Test the Installation**

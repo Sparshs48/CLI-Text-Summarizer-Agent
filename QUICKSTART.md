@@ -2,26 +2,27 @@
 
 ## Set Your Gemini API Key
 
-You have a Gemini API key: `AIzaSyBbD_4BQ9C_YJQpMwjNsY0woh913B5GbvA`
+You need a Gemini API key. Get one from
+[Google AI Studio](https://makersuite.google.com/app/apikey)
 
 ### Option 1: Set Environment Variable (Recommended)
 
 **Windows PowerShell:**
 
 ```powershell
-$env:GEMINI_API_KEY="AIzaSyBbD_4BQ9C_YJQpMwjNsY0woh913B5GbvA"
+$env:GEMINI_API_KEY="YOUR_API_KEY_HERE"
 ```
 
 **Windows CMD:**
 
 ```cmd
-set GEMINI_API_KEY=AIzaSyBbD_4BQ9C_YJQpMwjNsY0woh913B5GbvA
+set GEMINI_API_KEY=YOUR_API_KEY_HERE
 ```
 
 **Linux/Mac:**
 
 ```bash
-export GEMINI_API_KEY="AIzaSyBbD_4BQ9C_YJQpMwjNsY0woh913B5GbvA"
+export GEMINI_API_KEY="YOUR_API_KEY_HERE"
 ```
 
 ### Option 2: Create .env File
@@ -29,7 +30,7 @@ export GEMINI_API_KEY="AIzaSyBbD_4BQ9C_YJQpMwjNsY0woh913B5GbvA"
 Create a `.env` file in the project root:
 
 ```
-GEMINI_API_KEY=AIzaSyBbD_4BQ9C_YJQpMwjNsY0woh913B5GbvA
+GEMINI_API_KEY=Your key
 ```
 
 Then load it before running (requires a .env loader):

@@ -37,16 +37,16 @@ deno run summarizer.ts --help
 
 ## Your API Key
 
-```
-AIzaSyBbD_4BQ9C_YJQpMwjNsY0woh913B5GbvA
-```
+Get your API key from
+[Google AI Studio](https://makersuite.google.com/app/apikey) and replace
+`YOUR_API_KEY_HERE` in the commands below.
 
 ## Complete Command Template
 
 ```powershell
 # Setup (run once per terminal session)
 $env:HOME = $env:USERPROFILE
-$env:GEMINI_API_KEY="AIzaSyBbD_4BQ9C_YJQpMwjNsY0woh913B5GbvA"
+$env:GEMINI_API_KEY="Your key"
 
 # Then use:
 deno run --allow-env --allow-read --allow-net --allow-sys summarizer.ts "Text to summarize"
