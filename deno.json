@@ -1,7 +1,9 @@
 {
   "tasks": {
     "summarize": "deno run --allow-env --allow-read --allow-net --allow-sys summarizer.ts",
-    "summarize:url": "deno run --allow-env --allow-read --allow-net --allow-sys summarizer.ts --url"
+    "summarize:url": "deno run --allow-env --allow-read --allow-net --allow-sys summarizer.ts --url",
+    "server": "deno run --allow-env --allow-read --allow-net --allow-write server.ts",
+    "dev": "deno run --allow-env --allow-read --allow-net --allow-write --watch server.ts"
   },
   "imports": {
     "@corespeed/zypher": "jsr:@corespeed/zypher@^0.5.2",

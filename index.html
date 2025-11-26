@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Summarizer - AI Agent</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="container">
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <div class="sidebar-header">
+          <h1>📝 Summarizer</h1>
+          <p class="subtitle">AI-Powered Text Summarization</p>
+        </div>
+
+        <div class="input-section">
+          <div class="input-toggle">
+            <button class="toggle-btn active" data-type="text">Text</button>
+            <button class="toggle-btn" data-type="url">URL</button>
+          </div>
+
+          <div id="textInputGroup" class="input-group">
+            <label for="textInput">Enter Text</label>
+            <textarea
+              id="textInput"
+              placeholder="Paste or type your text here..."
+              rows="10"
+            ></textarea>
+          </div>
+
+          <div id="urlInputGroup" class="input-group hidden">
+            <label for="urlInput">Enter URL</label>
+            <input
+              type="url"
+              id="urlInput"
+              placeholder="https://example.com/article"
+            />
+          </div>
+
+          <div class="api-key-section">
+            <label for="apiKey">Gemini API Key</label>
+            <input
+              type="password"
+              id="apiKey"
+              placeholder="Enter your Gemini API key"
+            />
+            <small>Stored locally in your browser</small>
+          </div>
+
+          <button id="summarizeBtn" class="btn-primary">
+            <span class="btn-text">Generate Summary</span>
+            <span class="btn-loader hidden">⏳ Generating...</span>
+          </button>
+
+          <button id="clearBtn" class="btn-secondary">Clear</button>
+        </div>
+      </div>
+
+      <!-- Main Content -->
+      <div class="main-content">
+        <div class="content-header">
+          <h2>Summary</h2>
+          <button id="copyBtn" class="btn-icon" title="Copy to clipboard">
+            📋
+          </button>
+        </div>
+
+        <div id="summaryContent" class="summary-content">
+          <div class="empty-state">
+            <div class="empty-icon">✨</div>
+            <h3>Ready to Summarize</h3>
+            <p>
+              Enter your text or URL in the sidebar and click "Generate Summary"
+            </p>
+          </div>
+        </div>
+
+        <div id="statusMessage" class="status-message hidden"></div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
